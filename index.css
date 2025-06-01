@@ -5,7 +5,7 @@
 .all {
   background-color: black;
   width: 100%;
-  height: 500px;
+  height: 3000px;
 }
 .header {
   display: flex;
@@ -15,6 +15,7 @@
   background-color: teal;
   width: 200px;
   height: 100px;
+  margin-top: 10px;
 }
 .headerBar {
   margin: 10px;
@@ -27,7 +28,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .headerBar a {
   text-align: center;
@@ -37,39 +38,54 @@
 .menu {
   position: fixed;
   margin-top: 100px;
+  margin-left: 90%;
   width: 80px;
-  height: 600px;
-  background-color: gray;
+  height: 500px;
   color: aliceblue;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-size: 0.8rem;
 }
 .menu div {
   text-align: center;
-  line-height: 150px;
-  width: 80px;
-  height: 150px;
+  line-height: 130px;
+  width: 60px;
+  height: 130px;
 }
-.menu div:hover {
-  background-color: darkolivegreen;
-}
+
 #name {
   background-color: darkcyan;
-  border: 1px solid red;
+  border: 1px solid black;
   border-radius: 20px 20px 0 0;
 }
 #page01 {
   background-color: darkcyan;
-  border: 1px solid red;
+  border: 1px solid black;
 }
 #page02 {
   background-color: darkcyan;
-  border: 1px solid red;
+  border: 1px solid black;
 }
 #page03 {
   background-color: darkcyan;
-  border: 1px solid red;
+  border: 1px solid black;
   border-radius: 0 0 20px 20px;
+}
+#name:hover,
+#page01:hover,
+#page02:hover,
+#page03:hover {
+  background-color: black;
+}
+.main {
+  width: 100%;
+  height: 800px;
+  background-color: oldlace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
 }
