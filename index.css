@@ -34,6 +34,10 @@
   text-align: center;
   text-decoration: none;
   color: aliceblue;
+  width: 500px;
+  height: 100px;
+  background-color: gray;
+  line-height: 100px;
 }
 .menu {
   position: fixed;
@@ -57,20 +61,16 @@
 
 #name {
   background-color: darkcyan;
-  border: 1px solid black;
   border-radius: 20px 20px 0 0;
 }
 #page01 {
   background-color: darkcyan;
-  border: 1px solid black;
 }
 #page02 {
   background-color: darkcyan;
-  border: 1px solid black;
 }
 #page03 {
   background-color: darkcyan;
-  border: 1px solid black;
   border-radius: 0 0 20px 20px;
 }
 #name:hover,
