@@ -250,7 +250,7 @@
 .main03 {
   /*background-color: blueviolet;*/
   width: 1500px;
-  height: 700px;
+  height: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -261,7 +261,7 @@
   width: 1500px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .gaugeBar {
@@ -272,10 +272,32 @@
   border: 1px solid rgb(222, 222, 223);
 }
 .gauge {
+  transition: width 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: mediumpurple;
-  width: 200px;
+  width: 1px;
   height: 40px;
   border-radius: 10px;
+}
+
+.gauge.animate-html {
+  width: 300px;
+}
+
+.gauge.animate-css {
+  width: 300px;
+}
+
+.gauge.animate-js {
+  width: 300px;
+}
+.gauge.animate-sql {
+  width: 340px;
+}
+.gauge.animate-spring {
+  width: 270px;
+}
+.gauge.animate-oracle {
+  width: 260px;
 }
 
 .gaugeImage {
@@ -285,4 +307,8 @@
   object-fit: cover;
   object-position: center;
   border: 1px solid blueviolet;
+}
+.main04 {
+  width: 100%;
+  height: 200px;
 }

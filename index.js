@@ -9,12 +9,42 @@ window.addEventListener("DOMContentLoaded", () => {
     scroll.style.width = `${percent}%`;
   });
 
-  const object = document.querySelectorAll(".scroll-object");
+  const object = document.querySelectorAll(".scroll-object,.gauge");
   const observer = new IntersectionObserver(
-    (entries) => {
+    (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate");
+
+          const gauge = entry.target;
+          switch (gauge.id) {
+            case "html":
+              gauge.classList.add("animate-html");
+              break;
+            case "css":
+              gauge.classList.add("animate-css");
+              break;
+            case "js":
+              gauge.classList.add("animate-js");
+              break;
+            case "sql":
+              gauge.classList.add("animate-sql");
+              break;
+            case "spring":
+              gauge.classList.add("animate-spring");
+              break;
+            case "oracle":
+              gauge.classList.add("animate-oracle");
+              break;
+          }
+
+          console.log(
+            entry.target.id,
+            entry.isIntersecting,
+            entry.intersectionRatio
+          );
+
+          observer.unobserve(gauge);
         }
       });
     },
@@ -22,8 +52,8 @@ window.addEventListener("DOMContentLoaded", () => {
       threshold: 0.5,
     }
   );
-
   object.forEach((el) => observer.observe(el));
+
   const images = [
     "component/몽환적인 그림.jpg",
     "component/해파리.jpg",
