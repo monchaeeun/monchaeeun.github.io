@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>포트폴리오 작업</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <div class="all">
+      <div id="scroll"></div>
       <div class="header">
-        <header class="logo"></header>
+        <header class="logo">
+          <img src="component/logo.png" alt="로고 이미지" />
+        </header>
         <div class="headerBar">
           <a href="">포트폴리오1</a>
           <a href="">포트폴리오2</a>
@@ -19,27 +22,85 @@
       </div>
       <div class="aside">
         <div class="menu">
-          <div id="name">name</div>
+          <div id="info">name</div>
           <div id="page01">page01</div>
           <div id="page02">page02</div>
           <div id="page03">page03</div>
         </div>
       </div>
       <div class="main">
-        <div class="main01">백그라운드 이미지</div>
-        <div class="main02">
-          <div>
-            <div id="skill01"><img src="" alt="이미지" /></div>
-            <div id="skill02"><img src="" alt="이미지" />skill02</div>
-            <div id="skill03"><img src="" alt="이미지" />skill03</div>
+        <div class="main01">
+          <img
+            class="fade-img fade-img1"
+            src="component/몽환적인 그림.jpg"
+            alt=""
+          />
+          <img class="fade-img fade-img2" src="component/해파리.jpg" alt="" />
+        </div>
+
+        <div class="information">
+          <div class="info-image">
+            <img
+              src="component/메타몽.jpg"
+              alt="자기소개 사진"
+              class="scroll-object"
+            />
           </div>
-          <div>
-            <div id="skill04"><img src="" alt="이미지" />skill04</div>
-            <div id="skill05"><img src="" alt="이미지" />skill05</div>
-            <div id="skill06"><img src="" alt="이미지" />skill06</div>
+          <div class="info-text scroll-object">
+            <p>name| 문채은</p>
+            <p>age | 24</p>
+            <p>address | 인천광역시 남동구</p>
+            <p>email |silvermoon4989@gmail.com</p>
           </div>
         </div>
-        <div class="main03"></div>
+
+        <div class="main02">
+          <div>
+            <div id="skill01">
+              <img src="component/메타몽.jpg" alt="이미지" />
+            </div>
+            <div id="skill02">
+              <img src="component/메타몽.jpg" alt="이미지" />
+            </div>
+            <div id="skill03">
+              <img src="component/메타몽.jpg" alt="이미지" />
+            </div>
+          </div>
+          <div>
+            <div id="skill04">
+              <img src="component/메타몽.jpg" alt="이미지" />
+            </div>
+            <div id="skill05">
+              <img src="component/메타몽.jpg" alt="이미지" />
+            </div>
+            <div id="skill06">
+              <img src="component/메타몽.jpg" alt="이미지" />
+            </div>
+          </div>
+        </div>
+        <div class="main03">
+          <div class="gaugeContainer">
+            <img src="component/도트 메타몽.jpg" alt="" class="gaugeImage" />
+            <div class="gaugeBar"><div class="gauge" id="html"></div></div>
+
+            <img src="component/도트 메타몽.jpg" alt="" class="gaugeImage" />
+            <div class="gaugeBar"><div class="gauge" id="css"></div></div>
+          </div>
+          <div class="gaugeContainer">
+            <img src="component/도트 메타몽.jpg" alt="" class="gaugeImage" />
+            <div class="gaugeBar"><div class="gauge" id="js"></div></div>
+
+            <img src="component/도트 메타몽.jpg" alt="" class="gaugeImage" />
+            <div class="gaugeBar"><div class="gauge" id="sql"></div></div>
+          </div>
+          <div class="gaugeContainer">
+            <img src="component/도트 메타몽.jpg" alt="" class="gaugeImage" />
+            <div class="gaugeBar"><div class="gauge" id="spring"></div></div>
+
+            <img src="component/도트 메타몽.jpg" alt="" class="gaugeImage" />
+            <div class="gaugeBar"><div class="gauge" id="spring"></div></div>
+          </div>
+        </div>
         <div class="main04"></div>
       </div>
       <div class="footer"></div>
@@ -48,4 +109,5 @@
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
+  <script src="index.js"></script>
 </html>

@@ -3,24 +3,59 @@
   padding: 0;
 }
 .all {
-  background-color: black;
+  background-image: url("component/도트 메타몽.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 200px auto;
+  background-position: top left;
+  margin: 0;
   width: 100%;
   height: 3000px;
 }
+.all img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#scroll {
+  background-color: indigo;
+  border-radius: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10px;
+}
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .logo {
-  background-color: teal;
   width: 200px;
-  height: 100px;
+  height: 150px;
   margin-top: 10px;
+  margin-left: 10px;
+}
+.logo img {
+  width: 150px;
+  height: auto;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
 }
 .headerBar {
   margin-top: 10px;
   width: 500px;
-  height: 100px;
+  height: 35px;
+  font-weight: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -31,28 +66,31 @@
 .headerBar a {
   text-align: center;
   text-decoration: none;
-  color: aliceblue;
+  color: mediumpurple;
   width: 500px;
-  height: 100px;
-  line-height: 100px;
-  background-color: brown;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 .headerBar a:hover {
-  background-color: tomato;
-  color: black;
+  background-color: lightgrey;
+  color: indigo;
 }
 .menu {
   position: fixed;
-  margin-top: 140px;
+  margin-top: 15%;
   margin-left: 93%;
   width: 80px;
   height: 500px;
-  color: aliceblue;
+  color: blueviolet;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   font-size: 0.8rem;
+  will-change: transform;
+  z-index: 1000;
 }
 .menu div {
   text-align: center;
@@ -61,25 +99,89 @@
   height: 130px;
 }
 
-#name {
-  background-color: darkcyan;
+.information {
+  background-color: whitesmoke;
+  display: flex;
+  position: relative;
+  margin: 30px;
+  justify-content: space-around;
+  align-items: center;
+  width: 1500px;
+  height: 500px;
+}
+
+.info-image {
+  width: 300px;
+  height: 300px;
+  margin: 30px;
+  border-radius: 50%;
+}
+
+.info-image img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+.scroll-object {
+  transform: translateX(-30%); /* 처음에 왼쪽 밖에 있음 */
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.25, 0.25, 0.5, 1); /* 자연스럽고 부드럽게 */
+}
+
+.scroll-object.animate {
+  transform: translateX(0); /* 중앙으로 이동 */
+  opacity: 1;
+}
+
+.info-text {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: first baseline;
+
+  text-align: center;
+  color: blueviolet;
+  font-weight: 500;
+  font-style: normal;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#info {
+  background-color: whitesmoke;
+  border: 1px solid blueviolet;
   border-radius: 20px 20px 0 0;
+  transition: background-color 0.3s, color 0.3s;
 }
 #page01 {
-  background-color: darkcyan;
+  background-color: whitesmoke;
+  border: 1px solid blueviolet;
+  border-top: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 #page02 {
-  background-color: darkcyan;
+  background-color: whitesmoke;
+  border: 1px solid blueviolet;
+  border-top: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 #page03 {
-  background-color: darkcyan;
+  background-color: whitesmoke;
   border-radius: 0 0 20px 20px;
+  border: 1px solid blueviolet;
+  transition: background-color 0.3s, color 0.3s;
+  border-top: none;
 }
-#name:hover,
+#info:hover,
 #page01:hover,
 #page02:hover,
 #page03:hover {
-  background-color: black;
+  background-color: rgb(217, 183, 255);
+  color: indigo;
 }
 .main {
   width: 100%;
@@ -90,39 +192,97 @@
   text-align: center;
 }
 .main01 {
-  margin: 20px;
+  position: relative;
   width: 100%;
-  height: 800px;
-  background-color: slateblue;
+  height: 1200px;
+  background-color: black;
   line-height: 650px;
+  color: aliceblue;
+  overflow: hidden;
+}
+.fade-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 2.5s ease-in-out;
+  opacity: 0;
+  z-index: 0;
+  object-position: center;
+}
+.fade-img.active {
+  opacity: 1;
+  z-index: 1;
 }
 .main02 {
+  border: 2px solid rebeccapurple;
+  background-color: whitesmoke;
   margin: 30px;
   display: flex;
   flex-direction: row;
-  width: 1000px;
-  height: 300px;
+  justify-content: space-around;
+  width: 1500px;
+  height: 1500px;
 }
+.main02 img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+}
+
 #skill01,
 #skill02,
 #skill03,
 #skill04,
 #skill05,
 #skill06 {
-  margin: 30px;
   width: 400px;
-  height: 100px;
+  margin-top: 30px;
+  height: 400px;
   line-height: 100px;
-  background-color: aquamarine;
-  border: 1px solid red;
+  background-color: thistle;
+  border: 1px solid slateblue;
 }
-#skill01 img,
-#skill02 img,
-#skill03 img,
-#skill04 img,
-#skill05 img,
-#skill06 img {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
+.main03 {
+  /*background-color: blueviolet;*/
+  width: 1500px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.gaugeContainer {
+  width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.gaugeBar {
+  border-radius: 10px;
+  background-color: snow;
+  width: 400px;
+  height: 40px;
+  border: 1px solid rgb(222, 222, 223);
+}
+.gauge {
+  background-color: mediumpurple;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.gaugeImage {
+  flex: 0 0 100px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid blueviolet;
 }
