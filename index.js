@@ -1,4 +1,17 @@
 window.addEventListener("DOMContentLoaded", () => {
+  const inven = document.querySelector("#inven");
+  const togle = document.querySelector(".togle");
+  let isTogle = false;
+
+  inven.addEventListener("click", () => {
+    isTogle = !isTogle;
+    if (isTogle == true) {
+      togle.classList.add("animate-togle");
+    } else {
+      togle.classList.remove("animate-togle");
+    }
+  });
+
   const scroll = document.getElementById("scroll");
 
   window.addEventListener("scroll", () => {
