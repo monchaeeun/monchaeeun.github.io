@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
+  // 메뉴 토글
   const inven = document.querySelector("#inven");
   const togle = document.querySelector(".togle");
   let isTogle = false;
@@ -11,7 +12,7 @@ window.addEventListener("DOMContentLoaded", () => {
       togle.classList.remove("animate-togle");
     }
   });
-
+  //웹 맨 위 스크롤바 이벤트
   const scroll = document.getElementById("scroll");
 
   window.addEventListener("scroll", () => {
@@ -21,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     scroll.style.width = `${percent}%`;
   });
-
+  //스킬 바 이벤트
   const object = document.querySelectorAll(".scroll-object,.gauge");
   const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -67,6 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
   );
   object.forEach((el) => observer.observe(el));
 
+  //이미지 자동 움직임 이벤트
   const images = [
     "component/몽환적인 그림.jpg",
     "component/해파리.jpg",
