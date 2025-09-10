@@ -314,6 +314,13 @@
   border-radius: 20px;
   justify-content: center;
   background-color: whitesmoke;
+  color: darkorchid;
+}
+#skill01 div p,
+#skill02 div p,
+#skill03 div p,
+#skill04 div p {
+  color: darkorchid;
 }
 
 .main03 {
@@ -364,7 +371,7 @@
   width: 280px;
 }
 .gauge.animate-sql {
-  width: 270px;
+  width: 280px;
 }
 .gauge.animate-spring {
   width: 270px;
